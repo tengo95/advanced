@@ -26,44 +26,6 @@ import java.util.Random;
 
 
 public class LocateSmallest {
-    public static void main(String[] args) {
-        int nums[] = new int[100];
-        int min, min2;
-        min= min2 = 22_222;
-
-        Random rn = new Random();
-        for (int i=0; i<100; i++) {
-            nums[i] = rn.nextInt(22_222)+ 1;
-        }
-
-        System.out.println("Original array: ");
-        for (int x: nums) {
-            System.out.print(x+ " ");
-        }
-        System.out.println();
 
 
-        for (int i=0; i<nums.length; i++) {
-            if (nums[i] < min) {
-                min = nums[i];
-            }
-            else if (nums[i] < min2) {
-                min2 = nums[i];
-            }
-        }
-
-//        for (int x: nums) {
-//            if (x < min) min = x;
-//        }
-
-        System.out.println("Min: "+ min);
-
-//        for (int x: nums) {
-//            if (x > min && x<min2) min2 = x;
-//        }
-
-        System.out.println("Min2: "+ min2);
-
-        System.out.println("Sum of smallest two numbers: "+ (min+min2) );
-    }
 }
