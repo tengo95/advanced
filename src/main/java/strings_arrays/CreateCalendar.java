@@ -1,4 +1,4 @@
-package part_01;
+package strings_arrays;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -17,7 +17,7 @@ public class CreateCalendar {
     public static void main(String[] args) {
 
         // Create a Calendar object and set it's date to July 1, 2017.
-        Calendar calendar = new GregorianCalendar (2017, 6, 1, 16, 00);
+        Calendar calendar = new GregorianCalendar(2017, 6, 1, 16, 00);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy HH:MM");
         dateFormat.setTimeZone(calendar.getTimeZone());
@@ -48,5 +48,4 @@ public class CreateCalendar {
         // sout(date)
         System.out.println( dateFormat.format (calendar.getTime()) );
     }
-
 }
