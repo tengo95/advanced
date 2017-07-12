@@ -1,5 +1,7 @@
 package part_01;
 
+import java.util.Random;
+
 /**
  * Created by ryandesmond on 7/10/17.
  */
@@ -26,4 +28,43 @@ package part_01;
 */
 
 public class LocateSmallest2Dim {
+    public static void main(String[] args) {
+
+        int[][] array;
+        int min=22_222, min2=22_222;
+
+        Random rn = new Random();
+        int dim1 = rn.nextInt(30)+ 1;
+        int dim2 = rn.nextInt(30)+ 1;
+
+        array = new int[dim1][dim2];
+
+        System.out.println("Original array: ");
+        for (int i = 0; i<array.length; i++) {
+            for (int j = 0; j<array[i].length; j++) {
+
+                array[i][j] = rn.nextInt(22_222) + 1;
+                System.out.print(array[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i<array.length; i++) {
+            for (int j = 0; j<array[i].length; j++) {
+
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                } else if (array[i][j] < min2) {
+                    min2 = array[i][j];
+                }
+
+            }
+        }
+        System.out.println("Min: "+ min);
+
+        System.out.println("Min2: "+ min2);
+
+        System.out.println("Sum of smallest two numbers: "+ (min+min2) );
+
+    }
 }

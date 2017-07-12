@@ -1,5 +1,9 @@
 package part_01;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 /**
  * Created by ryandesmond on 7/10/17.
  */
@@ -10,23 +14,39 @@ package part_01;
  */
 public class CreateCalendar {
 
-    // Create a Calendar object and set it's date to July 1, 2017.
+    public static void main(String[] args) {
 
-    // sout(date)
+        // Create a Calendar object and set it's date to July 1, 2017.
+        Calendar calendar = new GregorianCalendar (2017, 6, 1, 16, 00);
 
-    // Subtract 4 hours from Calendar
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy HH:MM");
+        dateFormat.setTimeZone(calendar.getTimeZone());
 
-    // sout(date)
 
-    // add 1 week to the date
+        // sout(date)
+        System.out.println(dateFormat.format(calendar.getTime()) );
 
-    // sout(date)
 
-    // Format the date to show yyyy-MM-dd (ie, "2017-06-26") using SimpleDateFormat class
+        // Subtract 4 hours from Calendar
+        calendar.add(Calendar.HOUR, -4);
 
-    // sout(date)
+        // sout(date)
+        System.out.println(dateFormat.format(calendar.getTime()) );
 
-    // demostrate modifying the format of the date at least two other ways, (ie, "07-04-2017" or "Wed March 26 00:00:00 EST 2017")
+        // add 1 week to the date
+        calendar.add(Calendar.DATE, 7);
 
-    // sout(date)
+        // sout(date)
+        System.out.println(dateFormat.format(calendar.getTime()) );
+
+
+        // demostrate modifying the format of the date at least two other ways,
+        // (ie, "07-04-2017" or "Wed March 26 00:00:00 EST 2017")
+        dateFormat = new SimpleDateFormat("EEEE dd-MM-yyyy HH:MM");
+        dateFormat.setTimeZone(calendar.getTimeZone());
+
+        // sout(date)
+        System.out.println( dateFormat.format (calendar.getTime()) );
+    }
+
 }
