@@ -28,4 +28,12 @@ import java.util.Random;
 public class LocateSmallest {
 
 
+
+        Random rn = new Random();
+
+        for (int i=0; i<100; i++) {
+            nums[i] = rn.nextInt(22_222)+ 1;
+        }
+
+
 }
