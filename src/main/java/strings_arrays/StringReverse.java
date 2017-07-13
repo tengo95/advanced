@@ -11,7 +11,23 @@ public class StringReverse {
 
 	    // initialize the string from the args array
 
+		char dummy;
+
         // print out the letters in reverse order
+
+		for (int i=0; i<args.length; i++) {
+			for (int j=0; j<args[i].length(); j++ ) {
+				args[i].charAt(j) = dummy;
+
+			}
+		}
+
+		for (int i=0; i<args.length-1-i; i++) {
+			for (int j=0; j<args[i].length(); j++ ) {
+				dummy = args[i].charAt(j);
+			}
+
+		}
 
 	}
 
